@@ -1,0 +1,21 @@
+.grilla {
+	width: 606px;
+	height: 606px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.cuadro {
+	height: 200px;
+	width: 200px;
+	border: solid rgb(211, 59, 39) 1px;
+}
+
+.fantasma {
+	background-image: url("imagenes/fantasma.jpg");
+	background-size: cover;
+}
+
+.contenedor {
+    display: flex;
+}

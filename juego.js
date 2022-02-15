@@ -44,4 +44,4 @@ function contadorRegresivo(){
   }
 }
 
-let conteoTiempoId = setInterval(conteo, 1000)
+let conteoTiempoId = setInterval(contadorRegresivo, 1000)
