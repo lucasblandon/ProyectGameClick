@@ -8,6 +8,7 @@ let lugarGolpe
 let tiempoInicial = 60
 let idTiempo = null
 
+//remuevo los fantasmas y los pinto de manera random
 function cuadroRandom(){
     cuadro.forEach(cuadro => {
         cuadro.classList.remove('fantasma')
@@ -17,6 +18,7 @@ function cuadroRandom(){
     lugarGolpe = cuadroRandom.id
 }
 
+//recorro el tablero con una escucha de mouse 
 cuadro.forEach(cuadro =>{
   cuadro.addEventListener('mousedown', ()=>{
     if (cuadro.id == lugarGolpe){
@@ -27,12 +29,16 @@ cuadro.forEach(cuadro =>{
   })
 })
 
+// cada intervalo de tiempo 
 function moverFantasma(){
   idTiempo = setInterval(cuadroRandom, 500)
 }
 
+// ejecuto el mover
 moverFantasma()
 
+
+// tiempo 
 function contadorRegresivo(){
   tiempoInicial--
   tiempo.textContent = tiempoInicial
@@ -44,4 +50,5 @@ function contadorRegresivo(){
   }
 }
 
+//Ejecuta la funcion que retrocede el tiempo 
 let conteoTiempoId = setInterval(contadorRegresivo, 1000)
